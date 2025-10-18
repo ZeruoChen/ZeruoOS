@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麦金塔经典主题演示</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 演示页面特定样式 */
+        .demo-info {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #F9F0E9;
+            border: 2px solid #000;
+            padding: 20px;
+            z-index: 9999;
+            text-align: center;
+            max-width: 400px;
+        }
+        
+        .demo-info h2 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .demo-info p {
+            margin-bottom: 10px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        .demo-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        
+        .demo-button {
+            padding: 8px 16px;
+            background: #F6D5D5;
+            border: 1px solid #000;
+            cursor: pointer;
+            font-size: 11px;
+        }
+        
+        .demo-button:hover {
+            background: #E8C5C5;
+        }
+    </style>
+</head>
+<body>
+    <!-- 演示信息窗口 -->
+    <div class="demo-info">
+        <h2>麦金塔经典主题演示</h2>
+        <p>这是一个模仿早期麦金塔桌面风格的WordPress主题演示。</p>
+        <p>设计灵感来自 poolsuite.net</p>
+        <p>点击"开始演示"按钮体验主题功能。</p>
+        <div class="demo-buttons">
+            <button class="demo-button" onclick="startDemo()">开始演示</button>
+            <button class="demo-button" onclick="window.location.href='index.php'">查看WordPress版本</button>
+        </div>
+    </div>
+
+    <!-- 桌面界面 -->
+    <div class="desktop" style="display: none;">
+        <!-- 菜单栏 -->
+        <div class="menu-bar">
+            <div class="menu-left">
+                <div class="menu-icon"></div>
+                <span>麦金塔经典主题演示</span>
+            </div>
+            <div class="menu-right">
+                <div class="clock"></div>
+            </div>
+        </div>
+
+        <!-- 窗口容器 -->
+        <div class="window-container">
+            <!-- 窗口将通过JavaScript动态创建 -->
+        </div>
+
+        <!-- 程序坞 -->
+        <div class="dock">
+            <div class="dock-item" data-app="posts">
+                <img src="./Poolsuite/dock/newsroom.png" alt="文章列表">
+            </div>
+            <div class="dock-item" data-app="categories">
+                <img src="./Poolsuite/dock/mixtapes.png" alt="文章分类">
+            </div>
+            <div class="dock-item" data-app="links">
+                <img src="./Poolsuite/dock/guestbook.png" alt="友情链接">
+            </div>
+            <div class="dock-item" data-app="settings">
+                <img src="./Poolsuite/dock/settings.png" alt="设置">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/window-manager.js"></script>
+    <script>
+        function startDemo() {
+            document.querySelector('.demo-info').style.display = 'none';
+            document.querySelector('.desktop').style.display = 'block';
+            
+            // 初始化窗口管理器
+            window.windowManager = new WindowManager();
+        }
+        
+        // 演示数据
+        const demoPosts = [
+            {
+                id: 1,
+                title: '欢迎使用麦金塔经典主题',
+                content: '这是一个模仿早期麦金塔桌面风格的WordPress主题，提供复古的桌面体验。'
+            },
+            {
+                id: 2,
+                title: '主题功能特点',
+                content: '• 窗口管理系统<br>• 程序坞交互<br>• 响应式设计<br>• 复古像素风格'
+            },
+            {
+                id: 3,
+                title: '技术实现',
+                content: '使用纯CSS和JavaScript实现，兼容现代浏览器和移动设备。'
+            }
+        ];
+        
+        // 重写窗口管理器的方法以使用演示数据
+        const originalCreatePostListWindow = WindowManager.prototype.createPostListWindow;
+        WindowManager.prototype.createPostListWindow = function() {
+            const content = `
+                <div class="post-list">
+                    <h3>演示文章列表</h3>
+                    <ul>
+                        ${demoPosts.map(post => `
+                            <li><a href="#" class="post-link" data-id="${post.id}">${post.title}</a></li>
+                        `).join('')}
+                    </ul>
+                </div>
+            `;
+            
+            const window = this.createWindow('文章列表', content, 500, 300);
+            this.setupPostLinks(window.element);
+        };
+        
+        const originalOpenPostWindow = WindowManager.prototype.openPostWindow;
+        WindowManager.prototype.openPostWindow = function(postId, title) {
+            const post = demoPosts.find(p => p.id == postId);
+            const content = `
+                <div class="post-content">
+                    <h2>${title}</h2>
+                    <p>${post ? post.content : '文章内容加载中...'}</p>
+                </div>
+            `;
+            this.createWindow(title, content, 600, 400);
+        };
+    </script>
+</body>
+</html>
