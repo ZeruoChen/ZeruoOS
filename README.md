@@ -1,172 +1,147 @@
-# Macintosh Classic WordPress Theme
+[![image](https://img.shields.io/badge/Zeruo-OS-blue?style=for-the-badge&logo=apple)](https://github.com/ZeruoChen/ZeruoOS)
 
-一个模仿早期麦金塔桌面风格的WordPress主题，提供完整的桌面环境体验。
+<h1 align="left">ZeruoOS WordPress Theme</h1>
 
-## 主题概述
+> 一款复刻经典麦金塔系统界面的 WordPress 主题，怀旧、简洁、功能实用、体验独特。
 
-Macintosh Classic主题将WordPress网站转换为一个复古的桌面操作系统界面，用户可以通过点击程序坞图标来打开不同的内容窗口，如文章列表、分类目录、友情链接等。
+[![GitHub release](https://img.shields.io/github/v/release/ZeruoChen/ZeruoOS.svg?style=for-the-badge&logo=appveyor)](https://github.com/ZeruoChen/ZeruoOS/releases/latest)
+[![GitHub Release Date](https://img.shields.io/github/release-date/ZeruoChen/ZeruoOS?style=for-the-badge&logo=appveyor)](https://github.com/ZeruoChen/ZeruoOS/releases)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/ZeruoChen/ZeruoOS?style=for-the-badge&logo=appveyor)
+[![WordPress](https://img.shields.io/badge/WordPress-5.0+-blue?style=for-the-badge&logo=wordpress)](https://wordpress.org/)
 
-## 功能特性
+![Alt](https://repobeats.axiom.co/api/embed/0357d6db819698c209a88918a761f25c61313cdc.svg "Repobeats analytics image")
 
-### 桌面界面
-- 完整的桌面环境模拟，包括菜单栏、程序坞和窗口系统
-- 早期麦金塔系统美学风格，采用复古像素设计
-- 实时时钟显示和系统状态指示
+## 主题预览：
 
-### 窗口管理系统
-- 独立的程序窗口显示文章和页面内容
-- 窗口拖拽、缩放和关闭功能
-- 多窗口层级管理和激活状态
+[![image](screenshot.jpg)](screenshot.jpg)
 
-### 程序坞功能
-- 底部程序坞包含主要功能入口
-- 支持文章、分类、链接、设置等模块
-- 图标悬停效果和激活状态指示
+## 下载及使用相关：
 
-### 响应式设计
-- 移动端完整保留桌面操作体验
-- 程序坞自适应折叠/展开
-- 触控设备优化交互体验
+- 你可以前往 [Github Release](https://github.com/ZeruoChen/ZeruoOS/releases/latest) 下载最新版本
 
-## 安装方法
+- 使用 WordPress 后台主题上传功能进行安装
 
-### WordPress后台安装
-1. 下载主题ZIP压缩包
-2. 登录WordPress后台管理界面
-3. 进入"外观" → "主题" → "添加新主题"
-4. 点击"上传主题"按钮，选择ZIP文件
-5. 安装完成后激活主题
+- 主题演示：查看 `demo.html` 文件了解主题效果
 
-### 手动安装
-1. 解压主题文件到WordPress主题目录：`wp-content/themes/macintosh-classic/`
-2. 登录WordPress后台
-3. 进入"外观" → "主题"
-4. 找到"Macintosh Classic"主题并激活
+- 主题交流：[GitHub Issues](https://github.com/ZeruoChen/ZeruoOS/issues) 提交问题或建议
 
-## 使用说明
+- 如果在使用过程中遇到了任何问题，请先查看主题文件中的说明文档
 
-### 基本操作
-- **打开窗口**：点击程序坞中的图标打开对应功能窗口
-- **移动窗口**：拖拽窗口标题栏可以移动窗口位置
-- **调整大小**：拖拽窗口右下角可以调整窗口尺寸
-- **关闭窗口**：点击窗口左上角的关闭按钮
+- 在确认你遇到的现象确实是一个 Bug 后，请在 [Issues](https://github.com/ZeruoChen/ZeruoOS/issues/new/choose) 提交问题，并为该问题尽可能的描述清楚，谢谢配合。
 
-### 窗口功能
-- **文章列表**：显示网站最新文章，支持分页加载
-- **分类目录**：按文章分类浏览内容
-- **友情链接**：管理网站友情链接
-- **关于页面**：显示WordPress页面ID为2的内容
+## 功能特性：
 
-### 移动端操作
-在移动设备上，程序坞会自动调整布局，支持触摸操作。窗口功能与桌面端保持一致。
+### 🖥️ 经典桌面界面
+- 复刻麦金塔经典系统界面风格
+- 拟物化设计元素和怀旧配色
+- 像素风格图标和字体渲染
 
-## 文件结构
+### 🪟 窗口管理系统
+- 可拖拽、缩放、最小化的窗口
+- 多窗口层叠管理
+- 窗口状态记忆功能
+
+### 🚀 程序坞功能
+- Poolsuite 风格程序坞设计
+- 立体感按钮和分隔效果
+- 平滑的交互动画
+
+### 📱 响应式设计
+- 适配不同屏幕尺寸
+- 移动端友好界面
+
+## 安装方法：
+
+### 方法一：WordPress 后台安装
+1. 下载主题 ZIP 文件
+2. 进入 WordPress 后台 → 外观 → 主题
+3. 点击"上传主题"并选择 ZIP 文件
+4. 激活主题
+
+### 方法二：手动安装
+1. 解压主题文件到 `/wp-content/themes/` 目录
+2. 在 WordPress 后台激活主题
+
+## 文件结构：
 
 ```
-macintosh-classic/
-├── style.css                 # 主题样式文件
-├── index.php                 # 主模板文件
-├── header.php                # 头部模板
-├── footer.php                # 底部模板
-├── functions.php             # 主题功能文件
+Theme/
+├── index.php              # 主题主文件
+├── header.php             # 头部模板
+├── footer.php             # 底部模板
+├── functions.php          # 功能函数
+├── style.css              # 样式文件
 ├── js/
-│   └── window-manager.js     # 窗口管理脚本
-├── Poolsuite/                # 设计资源目录
-│   └── dock/                 # 程序坞图标
-├── demo.html                 # 演示页面
-└── README.md                 # 说明文档
+│   └── window-manager.js  # 窗口管理脚本
+├── Poolsuite/
+│   └── dock/              # 程序坞图标资源
+├── screenshot.jpg         # 主题截图
+└── README.md             # 说明文档
 ```
 
-## 技术实现
+## 窗口系统
+- 基于原生 JavaScript 的窗口管理器
+- 事件驱动的交互逻辑
+- 状态持久化存储
 
-### 前端技术栈
-- HTML5语义化结构
-- CSS3样式和响应式布局
-- JavaScript窗口管理和交互逻辑
+## 浏览器兼容性：
 
-### WordPress集成
-- 标准WordPress主题架构
-- REST API数据获取
-- 自定义器设置支持
-- 小工具区域集成
+- ✅ Chrome 60+
+- ✅ Firefox 55+
+- ✅ Safari 12+
+- ✅ Edge 79+
 
-### 窗口系统
-窗口管理系统基于自定义JavaScript实现，提供：
-- 窗口创建和销毁
-- 拖拽和缩放功能
-- 层级管理和焦点控制
-- 移动端触摸事件支持
-
-## 浏览器兼容性
-
-- Chrome 60+
-- Firefox 55+
-- Safari 12+
-- Edge 79+
-- 主流移动浏览器
-
-## 自定义开发
+## 自定义开发：
 
 ### 添加新窗口类型
-在`window-manager.js`文件中添加新的窗口创建方法：
-
 ```javascript
-createCustomWindow() {
-    const content = `
-        <div class="custom-content">
-            <!-- 自定义内容 -->
-        </div>
-    `;
-    return this.createWindow('自定义窗口', content, 600, 400);
-}
+// 在 window-manager.js 中添加新窗口类型
+const newWindow = {
+    id: 'custom-window',
+    title: '自定义窗口',
+    content: '<div>自定义内容</div>',
+    width: 600,
+    height: 400
+};
 ```
 
 ### 样式定制
-修改`style.css`文件中的CSS变量和样式规则，可以调整：
-- 颜色方案
-- 字体设置
-- 布局尺寸
-- 动画效果
+```css
+/* 在 style.css 中覆盖默认样式 */
+.dock-button {
+    background: linear-gradient(135deg, #your-color 0%, #your-color2 100%);
+}
+```
 
-### 功能扩展
-在`functions.php`中添加WordPress钩子和过滤器，实现：
-- 自定义短代码
-- 小工具支持
-- API端点扩展
+## 设计资源：
 
-## 设计资源
+- 程序坞图标基于 Poolsuite 风格设计
+- 麦金塔经典界面元素参考
+- 像素艺术风格图标
 
-主题设计参考了poolsuite.net的复古风格，使用了以下资源：
-- 像素风格图标
-- 复古色彩方案
-- 早期Macintosh界面元素
+## 开源协议：
 
-## 许可证
+本主题基于 [GPL v2.0](LICENSE) 协议开源。
 
-本主题基于GPL v2许可证发布，符合WordPress主题许可证要求。
+## 支持与反馈：
 
-## 支持与反馈
+如果你在使用过程中遇到问题或有改进建议，欢迎通过以下方式联系我们：
 
-如果您在使用过程中遇到问题或有改进建议，可以通过以下方式联系：
+- 📧 邮件支持：提交到 GitHub Issues
+- 💬 问题反馈：[GitHub Issues](https://github.com/ZeruoChen/ZeruoOS/issues)
+- 🔧 功能请求：通过 Issues 提交
 
-1. 在主题的GitHub仓库提交Issue
-2. 通过WordPress主题目录的评论功能
-3. 联系开发者邮箱
+## 更新日志：
 
-## 更新日志
+### v1.0.0 (当前版本)
+- ✅ 基础主题框架搭建
+- ✅ 麦金塔经典界面实现
+- ✅ 窗口管理系统完成
+- ✅ Poolsuite 风格程序坞
+- ✅ 响应式设计适配
 
-### v1.0.0 (2025)
-- 初始版本发布
-- 基础桌面界面实现
-- 窗口管理系统
-- WordPress内容集成
+## 希望你喜欢这款主题！
 
-## 注意事项
+- Star 趋势  [![GitHub stars](https://img.shields.io/github/stars/ZeruoChen/ZeruoOS?logo=github&style=social)](https://github.com/ZeruoChen/ZeruoOS/stargazers)
 
-- 主题为演示和教育目的开发，实际部署前请进行充分测试
-- 确保WordPress已启用REST API功能
-- 建议在生产环境使用前进行兼容性测试
-
----
-
-*本主题旨在提供独特的用户体验，将传统博客内容以桌面操作系统的方式呈现。*
+[![Stargazers over time](https://starchart.cc/ZeruoChen/ZeruoOS.svg)](https://github.com/ZeruoChen/ZeruoOS/stargazers)
