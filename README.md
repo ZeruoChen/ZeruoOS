@@ -132,7 +132,7 @@ const newWindow = {
 如果你在使用过程中遇到问题或有改进建议，欢迎通过以下方式联系我们：
 
 - 📧 邮件支持：ZeruoChen@iCloud.com
-- 🛜 主题网站：https://zeruo.net
+- 🛜 主题网站：https://zeruo.net/524
 - 💬 问题反馈：[GitHub Issues](https://github.com/ZeruoChen/ZeruoOS/issues)
 
 ## 更新日志：
