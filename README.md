@@ -83,12 +83,18 @@ Theme/
 - 事件驱动的交互逻辑
 
 ## 浏览器兼容性：
-
 - Safari 26 ✅
 - Chrome 140 ✅
-目前已测试以上浏览器
 
 ## 自定义开发：
+
+### 关于页面修改
+- 主题默认将ID=2的页面作为“关于”页面，如若修改请修改 /js/window-manager.js 文件第634行的内容：
+```javascript
+// 尝试从WordPress API获取页面内容（ID为2）
+const response = await fetch('/wp-json/wp/v2/pages/2');
+```
+- 将代码最后的 2 改为您的关于页面ID即可。
 
 ### 添加新窗口类型
 ```javascript
@@ -126,6 +132,7 @@ const newWindow = {
 如果你在使用过程中遇到问题或有改进建议，欢迎通过以下方式联系我们：
 
 - 📧 邮件支持：ZeruoChen@iCloud.com
+- 🛜 主题网站：https://zeruo.net
 - 💬 问题反馈：[GitHub Issues](https://github.com/ZeruoChen/ZeruoOS/issues)
 
 ## 更新日志：
