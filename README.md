@@ -37,9 +37,8 @@
 - 像素风格图标和字体渲染
 
 ### 🪟 窗口管理系统
-- 可拖拽、缩放、最小化的窗口
+- 可拖拽、缩放的窗口
 - 多窗口层叠管理
-- 窗口状态记忆功能
 
 ### 🚀 程序坞功能
 - Poolsuite 风格程序坞设计
@@ -82,14 +81,12 @@ Theme/
 ## 窗口系统
 - 基于原生 JavaScript 的窗口管理器
 - 事件驱动的交互逻辑
-- 状态持久化存储
 
 ## 浏览器兼容性：
 
-- ✅ Chrome 60+
-- ✅ Firefox 55+
-- ✅ Safari 12+
-- ✅ Edge 79+
+- Safari 26 ✅
+- Chrome 140 ✅
+目前已测试以上浏览器
 
 ## 自定义开发：
 
@@ -116,7 +113,7 @@ const newWindow = {
 ## 版权相关：
 
 - 程序坞图标来自 Poolsuite 
-- 字体使用了 Unifont
+- 字体使用了 Unifont 字体
 - 还有其他网络资源
 - 若有侵权请联系删除
 
@@ -128,9 +125,8 @@ const newWindow = {
 
 如果你在使用过程中遇到问题或有改进建议，欢迎通过以下方式联系我们：
 
-- 📧 邮件支持：提交到 GitHub Issues
+- 📧 邮件支持：ZeruoChen@iCloud.com
 - 💬 问题反馈：[GitHub Issues](https://github.com/ZeruoChen/ZeruoOS/issues)
-- 🔧 功能请求：通过 Issues 提交
 
 ## 更新日志：
 
